@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Ceylon Peacock Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        peacock: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-slate-800 bg-slate-50">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="images/logo.svg" alt="Ceylon Peacock Travel"
+                    class="w-10 h-10 group-hover:rotate-12 transition-transform duration-300">
+                <span
+                    class="text-2xl font-serif font-bold text-slate-900 group-hover:text-peacock-600 transition-colors">Ceylon
+                    Peacock<span class="text-peacock-500">.</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                <a href="index.html" class="hover:text-peacock-600 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-peacock-600 transition-colors">About</a>
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-peacock-600 transition-colors">
+                        Tours <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <!-- Dropdown -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="tours.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">All
+                            Tours</a>
+                        <a href="package1.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">Hill
+                            Country</a>
+                        <a href="package2.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">Beach
+                            Bliss</a>
+                        <a href="package3.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">Wild
+                            Safari</a>
+                    </div>
+                </div>
+                <a href="gallery.html" class="hover:text-peacock-600 transition-colors text-peacock-600">Gallery</a>
+                <a href="contact.html"
+                    class="px-6 py-2 bg-peacock-600 text-white rounded-full hover:bg-peacock-700 transition-all shadow-lg hover:shadow-peacock-500/30">Contact
+                    Us</a>
+            </div>
+            <button class="md:hidden text-slate-800"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="font-medium text-slate-800">Home</a>
+                <a href="about.html" class="font-medium text-slate-800">About</a>
+                <a href="tours.html" class="font-medium text-slate-800">Tours</a>
+                <a href="gallery.html" class="font-medium text-peacock-600">Gallery</a>
+                <a href="contact.html" class="font-medium text-peacock-600">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[50vh] flex items-center justify-center text-center px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900/50 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1920&auto=format&fit=crop');">
+        </div>
+        <div class="relative z-20 max-w-4xl pt-20">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-4">Capturing Moments</h1>
+            <p class="text-lg text-white/90 max-w-2xl mx-auto">A glimpse into the diverse beauty of our island.</p>
+        </div>
+    </header>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                <!-- Image 1 -->
+                <div class="break-inside-avoid rounded-3xl overflow-hidden group relative cursor-zoom-in">
+                    <img src="https://images.unsplash.com/photo-1586794611680-2a819c99187d?q=80&w=800&auto=format&fit=crop"
+                        alt="Sri Lanka 1"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="text-white font-serif font-bold text-xl">Scenic Beaches</span>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="break-inside-avoid rounded-3xl overflow-hidden group relative cursor-zoom-in">
+                    <img src="https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=800&auto=format&fit=crop"
+                        alt="Sri Lanka 2"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="text-white font-serif font-bold text-xl">Cultural Dance</span>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="break-inside-avoid rounded-3xl overflow-hidden group relative cursor-zoom-in">
+                    <img src="https://images.unsplash.com/photo-1590602392437-0131976a267e?q=80&w=800&auto=format&fit=crop"
+                        alt="Sri Lanka 3"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="text-white font-serif font-bold text-xl">Sigiriya Rock</span>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="break-inside-avoid rounded-3xl overflow-hidden group relative cursor-zoom-in">
+                    <img src="https://images.unsplash.com/photo-1534954477303-1d09e7c3e218?q=80&w=800&auto=format&fit=crop"
+                        alt="Sri Lanka 4"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="text-white font-serif font-bold text-xl">Coconut Trees</span>
+                    </div>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="break-inside-avoid rounded-3xl overflow-hidden group relative cursor-zoom-in">
+                    <img src="https://images.unsplash.com/photo-1544627192-e9fd2b204640?q=80&w=800&auto=format&fit=crop"
+                        alt="Sri Lanka 5"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="text-white font-serif font-bold text-xl">Wild Elephants</span>
+                    </div>
+                </div>
+
+                <!-- Image 6 -->
+                <div class="break-inside-avoid rounded-3xl overflow-hidden group relative cursor-zoom-in">
+                    <img src="https://images.unsplash.com/photo-1588258524675-c619ccc54359?q=80&w=800&auto=format&fit=crop"
+                        alt="Sri Lanka 6"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="text-white font-serif font-bold text-xl">Tea Plantations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-12 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Ceylon Peacock Travel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ceylon Peacock Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        peacock: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-slate-800 bg-slate-50">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="images/logo.svg" alt="Ceylon Peacock Travel"
+                    class="w-10 h-10 group-hover:rotate-12 transition-transform duration-300">
+                <span
+                    class="text-2xl font-serif font-bold text-slate-900 group-hover:text-peacock-600 transition-colors">Ceylon
+                    Peacock<span class="text-peacock-500">.</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                <a href="index.html" class="hover:text-peacock-600 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-peacock-600 transition-colors text-peacock-600">About</a>
+                <div class="relative group">
+                    <button class="flex items-center gap-1 hover:text-peacock-600 transition-colors">
+                        Tours <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <!-- Dropdown -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="tours.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">All
+                            Tours</a>
+                        <a href="package1.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">Hill
+                            Country</a>
+                        <a href="package2.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">Beach
+                            Bliss</a>
+                        <a href="package3.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">Wild
+                            Safari</a>
+                    </div>
+                </div>
+                <a href="gallery.html" class="hover:text-peacock-600 transition-colors">Gallery</a>
+                <a href="contact.html"
+                    class="px-6 py-2 bg-peacock-600 text-white rounded-full hover:bg-peacock-700 transition-all shadow-lg hover:shadow-peacock-500/30">Contact
+                    Us</a>
+            </div>
+            <button class="md:hidden text-slate-800"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="font-medium text-slate-800">Home</a>
+                <a href="about.html" class="font-medium text-peacock-600">About</a>
+                <a href="tours.html" class="font-medium text-slate-800">Tours</a>
+                <a href="gallery.html" class="font-medium text-slate-800">Gallery</a>
+                <a href="contact.html" class="font-medium text-peacock-600">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="relative h-[60vh] flex items-center justify-center text-center px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900/50 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://images.unsplash.com/photo-1546708773-e57c8d98d1d8?q=80&w=1920&auto=format&fit=crop');">
+        </div>
+        <div class="relative z-20 max-w-4xl pt-20">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-4">Our Story</h1>
+            <p class="text-lg text-white/90 max-w-2xl mx-auto">Passion for Travel. Love for Sri Lanka.</p>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1532467140362-e616cda76193?q=80&w=800&auto=format&fit=crop"
+                        alt="Sri Lanka Culture" class="rounded-3xl shadow-2xl z-10 relative">
+                    <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-peacock-100 rounded-full z-0"></div>
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-gold-100 rounded-full z-0"></div>
+                </div>
+                <div>
+                    <h2 class="text-peacock-600 font-bold tracking-widest uppercase text-sm mb-2">Who We Are</h2>
+                    <h3 class="text-4xl font-serif font-bold text-slate-900 mb-6">Unveiling the Authenticity of Sri
+                        Lanka</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Ceylon Peacock Travel was born out of a deep love for this serendipitous island. We believe that
+                        travel is not just about visiting places, but about feeling, tasting, and living the culture.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        Our team consists of certified guides and travel enthusiasts who have explored every corner of
+                        Sri Lanka. From the misty mountains of Ella to the golden beaches of Mirissa, we craft
+                        experiences that are personal, sustainable, and unforgettable.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <span class="block text-4xl font-bold text-peacock-600 mb-1">10+</span>
+                            <span class="text-slate-500">Years Experience</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-bold text-peacock-600 mb-1">5k+</span>
+                            <span class="text-slate-500">Happy Travelers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-3xl font-serif font-bold text-slate-900 mb-8">"To showcase the diverse beauty of Sri Lanka
+                to the world while preserving its nature and culture."</h2>
+            <div class="flex justify-center gap-4">
+                <div class="w-16 h-1 bg-peacock-500 rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-12 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Ceylon Peacock Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

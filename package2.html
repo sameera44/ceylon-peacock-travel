@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach Bliss Tour - Ceylon Peacock Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        peacock: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-slate-800 bg-slate-50">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="images/logo.svg" alt="Ceylon Peacock Travel"
+                    class="w-10 h-10 group-hover:rotate-12 transition-transform duration-300">
+                <span
+                    class="text-2xl font-serif font-bold text-slate-900 group-hover:text-peacock-600 transition-colors">Ceylon
+                    Peacock<span class="text-peacock-500">.</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                <a href="index.html" class="hover:text-peacock-600 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-peacock-600 transition-colors">About</a>
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-peacock-600 font-bold hover:text-peacock-600 transition-colors">
+                        Tours <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <!-- Dropdown -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="tours.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">All
+                            Tours</a>
+                        <a href="package1.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">Hill
+                            Country</a>
+                        <a href="package2.html"
+                            class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600 bg-peacock-50 text-peacock-600">Beach
+                            Bliss</a>
+                        <a href="package3.html" class="block px-4 py-2 hover:bg-peacock-50 hover:text-peacock-600">Wild
+                            Safari</a>
+                    </div>
+                </div>
+                <a href="gallery.html" class="hover:text-peacock-600 transition-colors">Gallery</a>
+                <a href="contact.html"
+                    class="px-6 py-2 bg-peacock-600 text-white rounded-full hover:bg-peacock-700 transition-all shadow-lg hover:shadow-peacock-500/30">Contact
+                    Us</a>
+            </div>
+            <button class="md:hidden text-slate-800"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="font-medium text-slate-800">Home</a>
+                <a href="about.html" class="font-medium text-slate-800">About</a>
+                <a href="tours.html" class="font-medium text-slate-800">Tours</a>
+                <a href="gallery.html" class="font-medium text-slate-800">Gallery</a>
+                <a href="contact.html" class="font-medium text-peacock-600">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-[70vh] flex items-center justify-center text-center px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-slate-900/40 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://images.unsplash.com/photo-1540206395-688085723adb?q=80&w=1920&auto=format&fit=crop');">
+        </div>
+        <div class="relative z-20 max-w-4xl pt-20 animate-fade-in-up">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-gold-400 text-slate-900 text-sm font-bold tracking-wider mb-4 shadow-lg">RELAXING</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 drop-shadow-lg">Tropical Beach Bliss
+            </h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto font-light">Sun, sand, and ocean breezes. A 5-day escape
+                to the southern coast.</p>
+        </div>
+    </header>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Itinerary -->
+                <div class="lg:col-span-2 space-y-12">
+                    <h2 class="text-3xl font-serif font-bold text-slate-900 border-b pb-4">Tour Itinerary</h2>
+
+                    <!-- Day 1 -->
+                    <div class="flex gap-6 group">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-12 h-12 bg-peacock-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg ring-4 ring-peacock-50 group-hover:ring-peacock-100 transition-all">
+                                1</div>
+                            <div class="flex-1 w-0.5 bg-slate-200 mt-4 group-hover:bg-peacock-200 transition-colors">
+                            </div>
+                        </div>
+                        <div class="pb-10">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Arrival & Bentonata</h3>
+                            <p class="text-slate-600 leading-relaxed">Relax by the Bentota beach. Optional water sports
+                                activities including jet skiing and windsurfing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="flex gap-6 group">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-12 h-12 bg-peacock-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg ring-4 ring-peacock-50 group-hover:ring-peacock-100 transition-all">
+                                2</div>
+                            <div class="flex-1 w-0.5 bg-slate-200 mt-4 group-hover:bg-peacock-200 transition-colors">
+                            </div>
+                        </div>
+                        <div class="pb-10">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Galle Fort</h3>
+                            <p class="text-slate-600 leading-relaxed">Explore the UNESCO World Heritage Dutch Fort. Walk
+                                along the ramparts and enjoy the colonial architecture and cafes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="flex gap-6 group">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-12 h-12 bg-peacock-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg ring-4 ring-peacock-50 group-hover:ring-peacock-100 transition-all">
+                                3</div>
+                            <div class="flex-1 w-0.5 bg-slate-200 mt-4 group-hover:bg-peacock-200 transition-colors">
+                            </div>
+                        </div>
+                        <div class="pb-10">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Mirissa Whale Watching</h3>
+                            <p class="text-slate-600 leading-relaxed">Early morning whale watching tour. Spot blue
+                                whales and dolphins. Afternoon leisure at Mirissa beach.</p>
+                        </div>
+                    </div>
+
+                    <!-- Day 4-5 -->
+                    <div class="flex gap-6 group">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-12 h-12 bg-peacock-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg ring-4 ring-peacock-50 group-hover:ring-peacock-100 transition-all">
+                                ...</div>
+                        </div>
+                        <div class="pb-0">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Unawatuna & Departure</h3>
+                            <p class="text-slate-600 leading-relaxed">Snorkeling at Jungle Beach. Famous stilt
+                                fishermen. Return to Colombo for departure.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Booking Card -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 sticky top-32">
+                        <div class="flex justify-between items-end mb-6">
+                            <div>
+                                <p class="text-slate-500 text-sm">Starting from</p>
+                                <h3 class="text-3xl font-bold text-peacock-600">$600</h3>
+                            </div>
+                            <span class="bg-peacock-50 text-peacock-700 px-3 py-1 rounded-full text-sm font-semibold">5
+                                Days</span>
+                        </div>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-peacock-500" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Beachfront Hotels</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-peacock-500" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Whale Watching Ticket</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-peacock-500" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Private Transport</span>
+                            </div>
+                        </div>
+                        <a href="contact.html"
+                            class="block w-full py-4 bg-peacock-600 text-white text-center rounded-xl font-bold text-lg hover:bg-peacock-700 transition-shadow shadow-lg hover:shadow-peacock-500/30">Book
+                            this Tour</a>
+                        <p class="text-center text-xs text-slate-400 mt-4">No hidden fees. Customize this tour.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 py-12 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Ceylon Peacock Travel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
